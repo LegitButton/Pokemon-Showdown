@@ -16,6 +16,8 @@ var fs = require('fs');
 
 const MAX_REASON_LENGTH = 300;
 
+if (typeof shop == "undefined") setTimeout(function() {shop = require('./shop.js').shop;}, 3000);
+
 var commands = exports.commands = {
 
 	version: function (target, room, user) {
